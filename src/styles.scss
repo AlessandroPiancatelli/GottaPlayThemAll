@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+ngb-carousel{
+  margin-bottom: 20px;
+     .carousel-control-next, .carousel-control-prev{
+       opacity: 1 !important;
+     .carousel-control-next-icon, .carousel-control-prev-icon{
+       width: 4rem;
+       height: 4rem;
+     }
+   }
+  }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faComputer, faHouseLaptop } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GottaPlayThemAll';
+  iconaHome = faHouseLaptop;
+  iconaPC = faComputer;
+  iconaXbox = faComputer;
 }

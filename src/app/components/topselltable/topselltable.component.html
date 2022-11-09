@@ -1,0 +1,20 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Nome</th>
+			<th scope="col">Copie vendute</th>
+			<th scope="col">Piattaforma</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let game of games; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+				{{ game.nome }}
+			</td>
+			<td>{{ game.copieVendute }}</td>
+			<td>{{ game.piattaforma }}</td>
+		</tr>
+	</tbody>
+</table>
