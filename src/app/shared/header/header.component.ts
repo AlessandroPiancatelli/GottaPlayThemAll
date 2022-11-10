@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faPlaystation, faXbox } from '@fortawesome/free-brands-svg-icons';
 import { faComputer, faHouseLaptop, faInr, faN, faPenNib, faStar, faUserNinja } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class AppComponent {
+export class HeaderComponent implements OnInit {
   title = 'GottaPlayThemAll';
   iconaHome = faHouseLaptop;
   iconaPC = faComputer;
@@ -15,4 +15,9 @@ export class AppComponent {
   iconaPlayStation = faPlaystation;
   iconaNuoveUscite = faStar;
   iconaSwitch = faN;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

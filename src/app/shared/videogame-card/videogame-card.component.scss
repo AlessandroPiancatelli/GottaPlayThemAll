@@ -1,0 +1,29 @@
+.container-cards{
+  display: block;
+  height: 275vh;
+  .card{
+   width:23%;
+   margin-left: 1.5%;
+   float: left;
+   margin-bottom: 20px;
+  }
+  .card-title{
+   font-weight: bold;
+   font-size: 16px;
+   color: #029bed;
+  }
+     .card-image{
+       height: 200px;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+     }
+   .card-text{
+     font-size: 10px;
+     text-align: justify;
+     overflow: hidden;
+     display: -webkit-box;
+     -webkit-line-clamp: 5;
+     -webkit-box-orient: vertical;
+   }
+ }

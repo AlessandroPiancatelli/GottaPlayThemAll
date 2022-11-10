@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { Carousel1Component } from './components/carousel/carousel1.component';
 import { TopselltableComponent } from './components/topselltable/topselltable.component';
 import { VideogamesComponent } from './components/videogames/videogames.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { VideogameCardComponent } from './shared/videogame-card/videogame-card.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Carousel1Component,
     TopselltableComponent,
-    VideogamesComponent
+    VideogamesComponent,
+    HeaderComponent,
+    FooterComponent,
+    VideogameCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

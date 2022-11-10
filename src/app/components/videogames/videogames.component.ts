@@ -8,6 +8,7 @@ import { Videogame } from 'src/app/models/videogame.model';
 })
 export class VideogamesComponent implements OnInit {
   videogiochi: Videogame[] = [];
+
   constructor(private videogameService: VideogameService) { }
 
   ngOnInit(): void {

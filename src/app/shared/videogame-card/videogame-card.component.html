@@ -1,0 +1,10 @@
+<div class="container-cards">
+ <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}"></div>
+    <div class="card-body">
+      <h5 class="card-title">{{videogame.title}}</h5>
+      <p class="card-text">{{videogame.description}}</p>
+      <a href="#" class="btn btn-primary">Vedi</a>
+    </div>
+  </div>
+</div>

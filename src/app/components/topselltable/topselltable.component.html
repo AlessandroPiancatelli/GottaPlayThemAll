@@ -1,3 +1,4 @@
+<header class="separatoreTabella"> I più venduti del mese</header>
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -11,6 +12,7 @@
 		<tr *ngFor="let game of games; index as i">
 			<th scope="row">{{ i + 1 }}</th>
 			<td>
+        <img src = '..\assets\images\DeadSpaceLogo.jpg'/>
 				{{ game.nome }}
 			</td>
 			<td>{{ game.copieVendute }}</td>

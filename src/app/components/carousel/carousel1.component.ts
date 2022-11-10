@@ -12,7 +12,9 @@ export class Carousel1Component implements OnInit {
     {id:2,
     label:'PlayStation'},
     {id:3,
-    label:'PC Gaming'}
+    label:'PC Gaming'},
+    {id:4,
+    label: 'Switch'},
   ];
 
   percorso='../assets/images/carousel-';
