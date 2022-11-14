@@ -26,4 +26,10 @@
      -webkit-line-clamp: 5;
      -webkit-box-orient: vertical;
    }
+   .btn-primary{
+    margin-left: 42%;
+   }
+   .btn{
+    --bs-btn-border-radius: 2rem;
+   }
  }

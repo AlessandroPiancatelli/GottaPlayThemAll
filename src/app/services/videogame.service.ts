@@ -11,4 +11,9 @@ export class VideogameService {
   getVideogames(): Observable<Videogame[]>{
     return of (VIDEOGAMES);
   }
+
+  getVideogame(id:number): Observable<Videogame | undefined>{
+    const videogame = VIDEOGAMES.find(videogame => videogame._id === id);
+    return of (videogame)
+  }
 }

@@ -1,0 +1,34 @@
+
+<div class="row-details">
+  <div class="column-1">
+    <img src="{{videogioco.image}}" style="width:100%">
+  </div>
+  <div class="column-2">
+    <img src="{{videogioco.image}}"  style="width:100%">
+    <a class="btn btn-primary" id="bottone">Recensione Multyplayer</a>
+    <p class="titolo-p">{{videogioco.title}}</p>
+  </div>
+  <div class="column-3">
+    <img src="{{videogioco.image}}"  style="width:100%">
+    <a class="btn btn-primary" id="bottone">Acquista nel {{videogioco.platform}} store</a>
+    <p class="titolo-p">{{videogioco.platform}}</p>
+  </div>
+</div>
+
+<!-- <img src="{{videogioco.image}}" class="img-fluid" alt="Responsive image"> -->
+<div class="separator">
+<!-- <p class="h1">{{videogioco.title}}</p> -->
+<p class="text-justify">{{videogioco.description}}</p>
+<!-- <p class="h5">Piattaforma: </p>
+<div class="scritta-piattaform">{{videogioco.platform}}</div> -->
+<br>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Giocato</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Finito</label>
+</div>
+<p class="h6" >videogioco pubblicato il {{videogioco.data}}.</p>
+</div>
