@@ -7,7 +7,8 @@ import { DetailComponent } from './components/videogames/detail/detail.component
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'home', component:HomeComponent},
-  {path:'nuoveuscite', component:VideogamesComponent},
+  {path:'videogiochi/:platform', component:VideogamesComponent},
+  {path:'videogiochi/all', component:VideogamesComponent},
   {path:'dettaglio/:_id', component:DetailComponent},
   {path:'**', redirectTo:'home'}
 ];

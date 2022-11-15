@@ -4,12 +4,24 @@
     <img src="{{videogioco.image}}" style="width:100%">
   </div>
   <div class="column-2">
-    <img src="{{videogioco.image}}"  style="width:100%">
+    <div class="finestra-immagine">
+      <img src="{{videogioco.image1}}"  style="
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+  ">
+    </div>
     <a class="btn btn-primary" id="bottone">Recensione Multyplayer</a>
     <p class="titolo-p">{{videogioco.title}}</p>
   </div>
   <div class="column-3">
-    <img src="{{videogioco.image}}"  style="width:100%">
+    <div class="finestra-immagine">
+      <img src="{{videogioco.image2}}"  style="
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+  ">
+    </div>
     <a class="btn btn-primary" id="bottone">Acquista nel {{videogioco.platform}} store</a>
     <p class="titolo-p">{{videogioco.platform}}</p>
   </div>
