@@ -26,7 +26,7 @@
             Xbox</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="videogiochi/PlayStation">
+          <a class="nav-link"  routerLink="videogiochi/Playstation">
              <fa-icon [icon]="iconaPlayStation"></fa-icon>
             PlayStation</a>
         </li>
@@ -42,11 +42,22 @@
           Nuove Uscite
           <fa-icon [icon]="iconaNuoveUscite"></fa-icon>
         </a>
+        <li class="nav-item">
+          <a class="nav-link" style="margin-left: 60px;
+          font-weight: 700;" routerLink="registration">
+          <fa-icon [icon]="iconaRegistrati"></fa-icon>
+          Registrati
+          <fa-icon [icon]="iconaRegistrati"></fa-icon>
+        </a>
         </li>
       </ul>
-      <span class="navbar-text">
-        The Must Catch Them (scelti dalla redazione)
-      </span>
+      <div class="field col-12 md:col-4" style="margin-left: 186px; width: 223px;">
+        <span class="p-float-label p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" id="inputtext-left" pInputText [(ngModel)]="valueIconLeft">
+            <label for="inputtext-left">Cerca qui</label>
+        </span>
+      </div>
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-dark lbg-dark" style="background-color: #08405f;"></nav>

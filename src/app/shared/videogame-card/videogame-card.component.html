@@ -1,7 +1,65 @@
-<p>CULO!</p>
-<div class="container-cards">
- <div class="card" *ngFor="let videogame of videogames">
-    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}"></div>
+<!-- <p>CULO!</p> -->
+<div class="container-cards" *ngIf="origine==='Pc'">
+  <div class="SensoArtistico">
+    <img src="https://i.imgur.com/dZGsk8F.png" style="margin-left: 50px; margin-right: 50px; margin-bottom: 70px; margin-top: 70px;">
+  </div>
+  <!-- <div class="h2"><img src="https://i.imgur.com/kzWSOBC.png" style="margin-right: 20px;"> Computer Gaming <img src="https://i.imgur.com/kzWSOBC.png" style="margin-left:20px"></div> -->
+  <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}" ></div>
+    <div class="card-body">
+      <h5 class="card-title" style="color: #605b5bc4;">{{videogame.title}}</h5>
+      <p class="card-text">{{videogame.description}}</p>
+      <a routerLink="/dettaglio/{{videogame._id}}" class="btn btn-primary" style="background-color: #605b5bc4; border-color: #605b5bc4;">Vedi</a>
+    </div>
+  </div>
+</div>
+<div class="container-cards" *ngIf="origine==='Xbox'">
+  <div class="SensoArtistico">
+    <img src="https://i.imgur.com/aq8jCbU.png" >
+  </div>
+  <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}" ></div>
+    <div class="card-body">
+      <h5 class="card-title" style="color: #008000c4;">{{videogame.title}}</h5>
+      <p class="card-text">{{videogame.description}}</p>
+      <a routerLink="/dettaglio/{{videogame._id}}" class="btn btn-primary" style="background-color: #008000c4; border-color: #008000c4;">Vedi</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-cards" *ngIf="origine==='Playstation'" style="clear:both">
+  <div class="SensoArtistico">
+    <img src="https://i.imgur.com/0ROTOI1.png">
+  </div>
+  <!-- <div class="h2" style="color: white"><img src="https://i.imgur.com/BbNOOKr.png" style="margin-right: 20px;">{{origine}}<img src="https://i.imgur.com/BbNOOKr.png" style="margin-left:20px"></div> -->
+  <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}" ></div>
+    <div class="card-body">
+      <h5 class="card-title" style="color: #010143cf;">{{videogame.title}}</h5>
+      <p class="card-text">{{videogame.description}}</p>
+      <a routerLink="/dettaglio/{{videogame._id}}" class="btn btn-primary" style="background-color: #010143cf; border-color: #010143cf;">Vedi</a>
+    </div>
+  </div>
+</div>
+<div class="container-cards" *ngIf="origine==='Switch'">
+  <div class="SensoArtistico">
+    <img src="https://i.imgur.com/QCaBLpO.png" style="margin-left: 50px; margin-right: 50px; margin-bottom: 70px; margin-top: 70px;">
+  </div>
+  <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}" ></div>
+    <div class="card-body">
+      <h5 class="card-title" style="color: #ff0000b0;">{{videogame.title}}</h5>
+      <p class="card-text">{{videogame.description}}</p>
+      <a routerLink="/dettaglio/{{videogame._id}}" class="btn btn-primary" style="background-color: #ff0000b0; border-color: #ff0000b0;">Vedi</a>
+    </div>
+  </div>
+</div>
+<div class="container-cards" *ngIf="origine==='all'">
+    <div class="SensoArtistico">
+      <img src="https://i.imgur.com/uMoYbAr.png" style="margin-left: 50px; margin-right: 50px; margin-bottom: 70px; margin-top: 70px;">
+    </div>
+  <div class="card" *ngFor="let videogame of videogames">
+    <div class="card-image" [ngStyle]="{'background-image':'url('+videogame.image+')'}" ></div>
     <div class="card-body">
       <h5 class="card-title">{{videogame.title}}</h5>
       <p class="card-text">{{videogame.description}}</p>

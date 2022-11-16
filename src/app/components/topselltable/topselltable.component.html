@@ -12,7 +12,7 @@
 		<tr *ngFor="let game of games; index as i">
 			<th scope="row">{{ i + 1 }}</th>
 			<td>
-        <img src = '..\assets\images\DeadSpaceLogo.jpg'/>
+        <img src = {{game.image}} style="margin-right: 20px;"/>
 				{{ game.nome }}
 			</td>
 			<td>{{ game.copieVendute }}</td>

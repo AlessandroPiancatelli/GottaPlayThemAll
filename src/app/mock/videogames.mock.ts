@@ -9,7 +9,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/fhBj9PU.jpg',
     image2:'https://i.imgur.com/InQeS3T.jpg',
 		data:'01/11/2022',
-		platform:'playstation',
+		platform:'Playstation',
 		published:true
 	},
 	{
@@ -20,7 +20,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/5ygnGfW.jpg',
     image2:'https://i.imgur.com/hjlx8VZ.jpg',
 		data:'01/11/2022',
-		platform:'playstation',
+		platform:'Playstation',
 		published:true
 	},
 	{
@@ -31,7 +31,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/8wM9dmn.jpg',
     image2:'https://i.imgur.com/prh9EpR.jpg',
 		data:'01/11/2022',
-		platform:'playstation',
+		platform:'Playstation',
 		published:true
 	},
 	{
@@ -42,7 +42,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/L7FlmDw.jpg',
     image2:'https://i.imgur.com/1cAIrvS.jpg',
 		data:'01/11/2022',
-		platform:'playstation',
+		platform:'Playstation',
 		published:true
 	},
 	{
@@ -53,7 +53,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/rGNNLfM.jpg',
     image2:'https://i.imgur.com/ykstccs.jpg',
 		data:'01/11/2022',
-		platform:'playstation',
+		platform:'Playstation',
 		published:true
 	},
 	{
@@ -64,7 +64,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/Mqmf2ZK.jpg',
     image2:'https://i.imgur.com/pplqdzF.jpg',
 		data:'02/11/2022',
-		platform:'xbox/gamepass',
+		platform:'Xbox',
 		published:true
 	},
 	{
@@ -75,7 +75,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/B5EYwvY.jpg',
     image2:'https://i.imgur.com/f3t1eXb.jpg',
 		data:'02/11/2022',
-		platform:'xbox/gamepass',
+		platform:'Xbox',
 		published:true
 	},
 	{
@@ -86,7 +86,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/B6xOAcd.jpg',
     image2:'https://i.imgur.com/0TuQCqS.jpg',
 		data:'02/11/2022',
-		platform:'xbox/gamepass',
+		platform:'Xbox',
 		published:true
 	},
 	{
@@ -97,7 +97,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/6LexZY2.jpg',
     image2:'https://i.imgur.com/bbZr3g3.jpg',
 		data:'02/11/2022',
-		platform:'xbox/gamepass',
+		platform:'Xbox',
 		published:true
 	},
 	{
@@ -108,7 +108,7 @@ export const VIDEOGAMES: Videogame[] = [
     image1:'https://i.imgur.com/cMXhsy0.jpg',
     image2:'https://i.imgur.com/qkL64n0.jpg',
 		data:'02/11/2022',
-		platform:'xbox/gamepass',
+		platform:'Xbox',
 		published:true
 	},
 	{

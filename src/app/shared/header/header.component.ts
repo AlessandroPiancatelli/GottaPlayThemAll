@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faPlaystation, faXbox } from '@fortawesome/free-brands-svg-icons';
-import { faComputer, faHouseLaptop, faInr, faN, faPenNib, faStar, faUserNinja } from '@fortawesome/free-solid-svg-icons';
+import { faComputer, faHouseLaptop, faInr, faN, faPenNib, faStar, faUserNinja} from '@fortawesome/free-solid-svg-icons';
+import { faRegistered} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,8 @@ export class HeaderComponent implements OnInit {
   iconaPlayStation = faPlaystation;
   iconaNuoveUscite = faStar;
   iconaSwitch = faN;
+  iconaRegistrati = faRegistered;
+  valueIconLeft: any;
   constructor() { }
 
   ngOnInit(): void {

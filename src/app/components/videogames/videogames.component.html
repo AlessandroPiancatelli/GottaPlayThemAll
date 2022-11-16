@@ -1,3 +1,17 @@
-<div *ngIf="culo=='Pc'">
-  <app-videogame-card [videogames]="videogiochi"></app-videogame-card>
+<!-- <div *ngIf="culo=='Pc'"> -->
+  <!-- <app-videogame-card [videogames]="videogiochi"></app-videogame-card> -->
+<div  class="container-cards" *ngIf="culo=='Xbox'" style="background-color: #0080006f;">
+  <app-videogame-card [origine]="culo"></app-videogame-card>
+</div>
+<div  class="container-cards" *ngIf="culo=='Playstation'" style=" background-color: #01014367;" >
+  <app-videogame-card [origine]="culo"></app-videogame-card>
+</div>
+<div  class="container-cards" *ngIf="culo=='Pc'" style=" background-color: #605b5bc4;">
+  <app-videogame-card [origine]="culo"></app-videogame-card>
+</div>
+<div  class="container-cards" *ngIf="culo=='Switch'" style=" background-color: #ff00004b;">
+  <app-videogame-card [origine]="culo"></app-videogame-card>
+</div>
+<div  class="container-cards" *ngIf="culo=='all'" >
+  <app-videogame-card [origine]="culo"></app-videogame-card>
 </div>

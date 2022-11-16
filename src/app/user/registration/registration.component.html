@@ -1,0 +1,61 @@
+<div class="registration-module">
+  <div class="col-6" style="float:left; padding:30px">
+    <div class="registration">
+      <p class="h1">Registrati</p>
+      <form class="registration-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-element">
+          <label for="exampleInputEmail1">Email address</label>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('email')">Il campo email è scritto male</p>
+          <p class="help is-danger" *ngIf="(!form.controls.email.valid && form.get('email').touched)&&!(form.controls['email'].hasError('email'))">Il campo è obbligatorio</p>
+          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email" formControlName="email">
+        </div>
+        <div class="form-element">
+          <label for="exampleInputEmail1">Nome</label>
+          <p class="help is-danger" *ngIf="form.controls['name'].hasError('minlength')" >Il campo nome deve contenere almeno 3 caratteri </p>
+          <p class="help is-danger" *ngIf="(!form.controls.name.valid && form.get('name').touched)&&!(form.controls['name'].hasError('minlength'))" >Il campo è obbligatorio</p>
+          <input type="email" class="form-control" id="Nome" aria-describedby="emailHelp" placeholder="Nome" formControlName="name">
+        </div>
+        <div class="form-element">
+          <label for="exampleInputEmail1">Cognome</label>
+          <p class="help is-danger" *ngIf="form.controls['cognome'].hasError('minlength')" >Il campo nome deve contenere almeno 3 caratteri </p>
+          <p class="help is-danger" *ngIf="(!form.controls.cognome.valid && form.get('cognome').touched)&&!(form.controls['cognome'].hasError('minlength'))" >Il campo è obbligatorio</p>
+          <input type="email" class="form-control" id="Cognome" aria-describedby="emailHelp" placeholder="Cognome" formControlName="cognome">
+        </div>
+        <div class="form-element">
+          <label for="exampleFormControlSelect2">Piattaforme preferite (puoi sceglierne più di 1)</label>
+          <p class="help is-danger" *ngIf="(!form.controls.sceltaMultipla.valid)" >Il campo è obbligatorio</p>
+          <select multiple class="form-control" id="sceltaMultipla" formControlName="sceltaMultipla">
+            <option>Xbox</option>
+            <option>Playstation</option>
+            <option>Switch</option>
+            <option>Computer</option>
+            <option>Non ho una piattaforma preferita</option>
+          </select>
+        </div>
+        <div class="form-element">
+          <label for="exampleInputPassword1">Password</label>
+          <p class="help is-danger" *ngIf="form.controls['password'].hasError('pattern')">Il campo password deve contenere: 1 Maiuscola, 1 Minuscola , 1 numero ed un carattere speciale</p>
+          <p class="help is-danger" *ngIf="(!form.get('password')?.valid && form.get('password').touched)&&!(form.controls['password'].hasError('pattern'))">Il campo è obbligatorio</p>
+          <input type="password" class="form-control" id="Password" placeholder="Password" formControlName="password">
+        </div>
+        <div class="form-element">
+          <label for="exampleInputPassword1">Ripeti-Password</label>
+          <p class="help is-danger" *ngIf="convalidaPassword">La password inserita è diversa</p>
+          <p class="help is-danger" *ngIf="(!form.get('ripetiPassword')?.valid && form.get('ripetiPassword').touched)&&!(convalidaPassword)">Il campo  è obbligatorio</p>
+          <input type="password" class="form-control" id="Ripeti" placeholder="Ripeti-Password" formControlName="ripetiPassword">
+        </div>
+        <div class="form-element form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="accetto">
+          <label class="form-check-label" for="exampleCheck1">Dichiaro di accetare i <a href="#">Termini del servizio</a></label>
+          <p class="help is-danger" *ngIf="!form.get('accetto')?.valid && form.get('accetto').touched">Il campo  è obbligatorio</p>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid" style="margin-top: 20px;">Registrati</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-6" style="float:right; border-top-left-radius: 0px ; border-bottom-left-radius: 0px ; margin-right: -1px;">
+    <img src="https://i.imgur.com/h7sN2mp.jpg" class="immagine-destra">
+  </div>
+
+</div>
