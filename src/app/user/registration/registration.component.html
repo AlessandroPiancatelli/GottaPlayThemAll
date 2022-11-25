@@ -22,9 +22,10 @@
           <input type="email" class="form-control" id="Cognome" aria-describedby="emailHelp" placeholder="Cognome" formControlName="cognome">
         </div>
         <div class="form-element">
-          <label for="exampleFormControlSelect2">Piattaforme preferite (puoi sceglierne più di 1)</label>
+          <label for="exampleFormControlSelect2">Piattaforme preferita</label>
           <p class="help is-danger" *ngIf="(!form.controls.sceltaMultipla.valid)" >Il campo è obbligatorio</p>
-          <select multiple class="form-control" id="sceltaMultipla" formControlName="sceltaMultipla">
+          <!-- multiple -->
+          <select class="form-control" id="sceltaMultipla" formControlName="sceltaMultipla">
             <option>Xbox</option>
             <option>Playstation</option>
             <option>Switch</option>

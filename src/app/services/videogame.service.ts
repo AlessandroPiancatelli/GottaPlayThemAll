@@ -2,18 +2,25 @@ import { Injectable } from '@angular/core';
 import { Videogame } from '../models/videogame.model';
 import { VIDEOGAMES } from '../mock/videogames.mock';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
 export class VideogameService {
-
-  constructor() { }
+  apiBaseUrl="/api/videogames";
+  constructor(private http:HttpClient) { }
   getVideogames(): Observable<Videogame[]>{
-    return of (VIDEOGAMES);
+    // return of (VIDEOGAMES);
+    return this.http.get<Videogame[]>(`${this.apiBaseUrl}/`)
   }
 
   getVideogame(id:number): Observable<Videogame | undefined>{
-    const videogame = VIDEOGAMES.find(videogame => videogame._id === id);
-    return of (videogame)
+    return this.http.get<Videogame>(`${this.apiBaseUrl}/${id}`)
+  }
+
+  saveVideogame(body:any): Observable<any>{
+    return this.http.post<any>(`/api/videogames/`,body)
+
   }
 }

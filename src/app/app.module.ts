@@ -10,6 +10,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { CascadeSelectModule } from "primeng/cascadeselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
+import {ToastModule} from 'primeng/toast';
+import { PasswordModule } from "primeng/password";
 
 import { AppComponent } from './app.component';
 import { Carousel1Component } from './components/carousel/carousel1.component';
@@ -21,6 +23,9 @@ import { VideogameCardComponent } from './shared/videogame-card/videogame-card.c
 import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/videogames/detail/detail.component';
 import { RegistrationComponent } from './user/registration/registration.component';
+import { AggiungiVideogameComponent } from './components/aggiungi-videogame/aggiungi-videogame.component';
+import { LoginComponent } from './user/login/login.component';
+import { ProfileComponent } from './user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { RegistrationComponent } from './user/registration/registration.componen
     VideogameCardComponent,
     HomeComponent,
     DetailComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    AggiungiVideogameComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,10 @@ import { RegistrationComponent } from './user/registration/registration.componen
     HttpClientModule,
     CascadeSelectModule,
     InputTextModule,
-    InputTextareaModule
+    InputTextareaModule,
+    HttpClientModule,
+    ToastModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class VideogameCardComponent implements OnInit {
   videogames : Videogame[] ;
-
+  page = 1;
+  videogamesPerPagina = 4;
+  pagingNumber = 0;
   @Input() origine:string;
 
   constructor(private activatedRoute: ActivatedRoute, private videogameService: VideogameService) { }
@@ -39,9 +41,21 @@ export class VideogameCardComponent implements OnInit {
       }),
     console.log(this.origine)
     }
+    this.pagine();
   }
 
   OnGetOrigin(){
 
+  }
+
+  pagine(){
+    let tot;
+    if (this.videogames){
+      tot = this.videogames.length
+    }
+
+    this.page = 1;
+    this.pagingNumber = 0;
+    this.pagingNumber = Math.ceil(this.videogames?.length/ this.videogamesPerPagina / 4)
   }
 }

@@ -1,0 +1,56 @@
+.contenitore{
+  display:flex;
+  width: 50%;
+  margin: 5%;
+  justify-content: center;
+  border: 3px solid #029bed;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 71px;
+  background-color: lightgrey;
+  flex-direction:column;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.form-group{
+  width:90%;
+  margin-top:20px;
+}
+
+.input-group {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 90%;
+}
+
+.form-check{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color:#029bed;
+  border-color: #029bed;
+  width: 20%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.input-group-text{
+  height: 100%;
+}
+.h1{
+  text-align: center;
+  color:#029bed;
+  font-family: "Homemade Apple", cursive;
+  font-size: 30px;
+  margin-top: 20px;
+}

@@ -1,14 +1,14 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark hbg-dark" style="background-color: #08405f;"></nav>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #029bed;">
+  <nav class="navbar navbar-expand-xxl navbar-dark bg-dark" style="background-color: #029bed;">
     <a class="navbar-brand" routerLink="home">
       <img src="../assets/images/logo.png" class="logo" alt="logo GottaPlayThemAll">
       <span>GottaPlayThemAll</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed=!isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse" id="navbarText"  [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto" style="white-space: nowrap;">
         <li class="nav-item active">
           <a class="nav-link" routerLink="home">
@@ -35,29 +35,79 @@
              <fa-icon [icon]="iconaSwitch"></fa-icon>
             Switch</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="margin-left: 60px;
+        <li class="nav-item" style="
+        margin-left: 20px;
+        margin-right: 20px;
+    ">
+          <a class="nav-link" style="
           font-weight: 700;" routerLink="videogiochi/all">
           <fa-icon [icon]="iconaNuoveUscite"></fa-icon>
           Nuove Uscite
           <fa-icon [icon]="iconaNuoveUscite"></fa-icon>
-        </a>
-        <li class="nav-item">
+        </a></li>
+        <li class="nav-item"  style="margin: auto;">
+
+          <div *ngIf="!authService?.isLogged()" >
+          <a class="nav-link" routerLink="login">
+            <i class="pi pi-user"></i>
+            Accedi</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" style="margin-left: 60px;
-          font-weight: 700;" routerLink="registration">
+          font-weight: 700;" routerLink="login">
           <fa-icon [icon]="iconaRegistrati"></fa-icon>
           Registrati
           <fa-icon [icon]="iconaRegistrati"></fa-icon>
         </a>
+        </li> -->
+        <li class="nav-item" >
+
+          <div *ngIf="authService?.isLogged()" >
+          <a class="nav-link" style="float: left; "> <span class="name" style="float:left">Ciao {{user.name}}</span></a>
+          <a class="nav-link" style="float: left; " href="profile"><i class="pi pi-user" style="float: left;margin-top: 4px;margin-right: 5px;" ></i> <span class="name" style="float:left">profilo</span></a>
+          <!-- <a href="profilo"> profilo</a> -->
+          <a style="margin-top: 10px;" href="#" (click)="logout()"><p style="float:left;margin-top: 8px;margin-bottom: -20px; color: rgba(30, 0, 255, 0.473);font-weight: 800;">ESCI</p></a>
+          <!-- <a class="nav-link" style="float: left;"><i class="pi pi-user"></i> <span class="name">Ciao {{user.name}}</span></a>
+          <a style="margin-top: 5px;" href="#" (click)="logout()"><p style="float:left;margin-left:20px;margin-top: 9px;margin-bottom: -20px; color: rgb(13 0 255 / 54%);font-weight: 800;">ESCI</p></a> -->
+          <!-- <a class="nav-link" routerLink="AggiungiRicetta" *ngIf="user.role=='admin'" style="float:right">
+            <fa-icon [icon]="iconaAggiungiRicetta"></fa-icon>
+            Aggiungi Ricetta</a> -->
+            <a class="nav-link" style="
+            font-weight: 700; float:right" routerLink="new-videogame" *ngIf="user?.role=='admin'">
+            <fa-icon [icon]="iconaAdd"></fa-icon>
+          </a>
+          </div>
+        </li>
+        <!-- <li>
+            <a class="nav-link" style="
+            font-weight: 700; float:right" routerLink="new-videogame" *ngIf="user?.role=='admin'">
+            <fa-icon [icon]="iconaAdd"></fa-icon>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" style="margin-left: 60px;
+          font-weight: 700;" routerLink="new-videogame">
+          <fa-icon [icon]="iconaAdd"></fa-icon>
+        </a>
+        </li> -->
+        <li style="margin-left: 100px;" >
+          <div class="field col-12 md:col-4" style="margin-left: auto; margin-right: 10px; width: 223px;">
+            <span class="p-float-label p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" id="inputtext-left" pInputText [(ngModel)]="valueIconLeft">
+                <label for="inputtext-left">Cerca qui</label>
+            </span>
+          </div>
         </li>
       </ul>
-      <div class="field col-12 md:col-4" style="margin-left: 186px; width: 223px;">
+      <!-- <div class="field col-12 md:col-4" style="margin-left: auto; margin-right: 10px; width: 223px;">
         <span class="p-float-label p-input-icon-left">
             <i class="pi pi-search"></i>
             <input type="text" id="inputtext-left" pInputText [(ngModel)]="valueIconLeft">
             <label for="inputtext-left">Cerca qui</label>
         </span>
-      </div>
+      </div> -->
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-dark lbg-dark" style="background-color: #08405f;"></nav>

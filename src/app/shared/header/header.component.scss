@@ -24,3 +24,28 @@
 .navbar-text{
   margin-left: 272px;
 }
+
+button.navbar-toggler {
+  margin-right: 40px;
+}
+
+// @media (min-width: 768px) and (max-width: 1220px) {
+//   .navbar-collapse.collapse {
+//       display: none !important;
+//   }
+//   .navbar-collapse.collapse.in {
+//       display: block !important;
+//   }
+//   .navbar-header .collapse, .navbar-toggle {
+//       display:block !important;
+//   }
+//   .navbar-header {
+//       float:none;
+//   }
+// }
+// @media (min-width: 1200px){
+// .navbar-expand-lg {
+//   flex-wrap: nowrap;
+//   justify-content: flex-start;
+// }
+// }

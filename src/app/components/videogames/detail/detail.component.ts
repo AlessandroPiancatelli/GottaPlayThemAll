@@ -20,7 +20,9 @@ export class DetailComponent implements OnInit {
   }
 
   OnGetVideogame(): void {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
+    // const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
+    this.activatedRoute.params.subscribe((urlParams) =>{
+      const id = urlParams['_id'];
     this.videogameService.getVideogame(id).subscribe({
       next: (res) => {
         this.videogioco = res;
@@ -30,5 +32,6 @@ export class DetailComponent implements OnInit {
         console.error(err);
       }
     })
+  })
   }
 }

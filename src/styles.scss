@@ -27,3 +27,20 @@ ngb-carousel{
     background-color: #029bed !important;
   }
 
+  .p-password{
+    display: block !important;
+  }
+
+  .p-inputtext{
+    width: 100% !important;
+  }
+
+  .p-password-input{
+    width: 100% !important;
+  }
+
+  @media (min-width: 1200px) {
+    .collapse {
+        display: none !important;
+    }
+ }
